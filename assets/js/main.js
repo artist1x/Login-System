@@ -10,6 +10,8 @@ var userName = document.querySelectorAll('.userName');
 var logoutbutton = document.getElementById('logOut')
 var loading = document.getElementById('loading')
 var ol = document.querySelector('ol')
+
+
 function signUp(){
     var users = {
         name: nameSignUp.value ,
