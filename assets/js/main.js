@@ -34,7 +34,7 @@ function signUp(){
             popUpShow.classList.add('d-flex' )
             loading.style.display = 'block';
             setTimeout(() => {
-                window.open = "index.html" , '_self';
+                window.open("index.html" , "_self");
             }, 2000);}
             }else{
         popUpInner.innerHTML = `     Name , Mail Or Password is not valid, Please follow the rules below :
