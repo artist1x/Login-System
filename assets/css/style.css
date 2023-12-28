@@ -1,0 +1,90 @@
+::selection{
+    background: #00a24e;
+}
+body{
+    overflow: auto;
+    background-color: #202124;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+i{
+    color: #00a24f;
+}
+
+/* Header Section */
+header{
+    display: flex;
+    justify-content: center;
+}
+header h1{
+    position: relative;
+    display: inline-block;
+    font-family: 'Pacifico', cursive;
+}
+header h1::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 25%;
+    background-color: #00a24f;
+    bottom: 1px;
+    left: 0;
+    z-index: -1;
+    transition: height 350ms ease 0s;
+}
+header h1:hover::before{
+    height: 60%;
+}
+/* End Header Section */
+
+.btn{
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+.btn-main{
+    color: #00a24f;
+    padding: 7px 25px;
+}
+.btn-main:hover {
+    color: white;
+    background-color: #00a24f;
+    border-color: #00a24f;
+}
+#updateBtn{
+    display: none;
+}
+#popupWindow{
+    display: none !important;
+}
+#popupReg{
+    display: none ;
+}
+.circles span {
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+.circles span:nth-child(1) {
+    background-color: #f15f5d;
+}
+.circles span:nth-child(2) {
+    background-color: #febe2e;
+}
+.circles span:nth-child(3) {
+    background-color: #4db748;
+}
+
+.form-control:focus {
+    border-color: #00a24f;
+}
+
+/* @media screen and (max-width: 768px){
+    
+} */
+.userWelcome{
+    color: red ;
+}

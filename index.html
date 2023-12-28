@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    
+    <title>Login System</title>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1 class="text-center mt-5 mb-3  ">Login System</h1>
+    </header>
+    <section class="overflow-hidden w-50 m-auto  ">
+            <div class="w-100 p-3 py-4 mt-5 d-flex flex-column justify-content-center align-items-center gap-4">
+                <h2>
+                <i class="fa-solid fa-server"></i>
+                Smart login System 
+                
+                </h2>
+                
+                <div class="email w-100 d-flex flex-column justify-content-center">
+                <label for="email" class="pb-2 fw-semibold">
+                    <i class="fa-solid fa-envelope"></i>
+                    Your E-Mail</label>
+                    <input type="email" oninput="validatelogin(this.value , 'email')" placeholder="Your E-Mail" class="form-control" id="email">
+                </div>
+                <div class="password w-100 d-flex flex-column justify-content-center">
+                <label for="password" class="pb-2 fw-semibold">
+                    <i class="fa-solid fa-lock"></i> Your Password</label>
+                <input type="password" oninput="validatelogin(this.value , 'password')" placeholder="password" class="form-control" id="password">
+                </div>
+                <button class="btn btn-outline-success btn-main btn-submit px-5 fw-bold" onclick="login()" id="login">Login</button>
+                <div id="loading" style="display: none;">جار التحميل...</div>
+                <p>Don’t have an account? <a href="signup.html">Sign Up</a></p>
+            </div>
+        </section>
+        
+            <div id="popupReg" class="box-info position-absolute start-0 top-0 w-100 h-100  justify-content-center align-items-center ">
+                <div class="box-conent bg-black p-4 rounded-2 shadow-lg">
+                <header class="box-header w-100 d-flex justify-content-between align-items-center mb-4">
+                    <div class="circles d-flex">
+                    <span class="rounded-circle me-2"></span>
+                    <span class="rounded-circle me-2"></span>
+                    <span class="rounded-circle me-2"></span>
+                    </div>
+                    <button class="btn border-0" onclick="closePopUp()" id="closeBtn">
+                    <i class="fa-solid fa-xmark close fs-3"></i>
+                    </button>
+                </header>
+                <p class="m-0 pb-2">This User Data is incorrect , please Check your Data again .</p>
+                <ol class="rules list-unstyled m-0 d-none">
+                    <li>
+                    <i class="fa-regular fa-circle-right p-2"></i>The email may be incorrect
+                    </li>
+                    <li>
+                    <i class="fa-regular fa-circle-right p-2"></i>The Password may be incorrect
+                    </li>
+                    <li>
+                        <p class="text-center my-3">Don’t have an account? <a href="signup.html">Sign Up</a></p>
+                    </li>
+                </ol>
+                
+                </div>
+            </div>
+</div>
+
+
+<!-- scripts -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
